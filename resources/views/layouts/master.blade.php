@@ -11,7 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- Styles -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body class="bg-secondary bg-opacity-50">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -33,6 +33,6 @@
         <div class="container content">
             @yield('content')
         </div>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
