@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +17,5 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', IndexController::class)->name('index');
+Route::get('/forum', ForumController::class)->name('forum');
+Route::get('/about', AboutController::class)->name('about');

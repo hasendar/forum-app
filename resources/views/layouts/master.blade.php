@@ -20,11 +20,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('index') }}">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('forum') }}">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
+                    </li>
                 </ul>
                 <span class="navbar-text">Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</span>
             </div>
         </nav>
-        <div class="container">
+        <div class="container content">
             @yield('content')
         </div>
         <script src="js/bootstrap.bundle.min.js"></script>
