@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
-    public function __invoke(Request $request)
+    public function __invoke()
     {
         return view('about');
     }
