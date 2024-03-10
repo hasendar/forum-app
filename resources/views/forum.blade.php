@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Forum page</h1>
-    <a class="btn btn-primary" href="#" role="button">Create Thread</a>
+    <a class="btn btn-primary" href="{{ route('thread.create') }}" role="button">Create Thread</a>
     <div class="container">
         <div class="card border-dark mt-3" style="width: 20rem;">
             <ul class="list-group list-group-flush">
