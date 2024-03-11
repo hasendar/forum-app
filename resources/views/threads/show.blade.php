@@ -2,14 +2,19 @@
 
 @section('content')
     <h1>Show thread page</h1>
-    <div class="container">
-        <a class="btn btn-primary mb-3" href="{{ route('forum') }}" role="button">Back</a>
-        <a class="btn btn-primary mb-3" href="{{ route('threads.edit', $thread) }}" role="button">Edit</a>
-        <div class="card" style="width:20rem">
-            <div class="card-body">
-                <h5>{{ $thread->title }}</h5>
-                <p>{{ $thread->content }}</p>
+    <form action="{{ route('threads.destroy', $thread->id) }}" method="post">
+        @csrf
+        @method('delete')
+        <div class="container">
+            <a class="btn btn-primary mb-3" href="{{ route('forum') }}" role="button">Back</a>
+            <a class="btn btn-primary mb-3" href="{{ route('threads.edit', $thread) }}" role="button">Edit</a>
+            <button type="submit" class="btn btn-danger mb-3">Delete</button>
+            <div class="card" style="width:20rem">
+                <div class="card-body">
+                    <h5>{{ $thread->title }}</h5>
+                    <p>{{ $thread->content }}</p>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 @endsection

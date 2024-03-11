@@ -26,4 +26,5 @@ Route::group(['namespace' => 'App\Http\Controllers\Thread'], function() {
     Route::get('/forum/{thread}', ShowThreadController::class)->name('threads.show');
     Route::get('/forum/{thread}/edit', EditThreadController::class)->name('threads.edit');
     Route::patch('/forum/{thread}', UpdateThreadController::class)->name('threads.update');
+    Route::delete('/forum/{thread}', DestroyThreadController::class)->name('threads.destroy');
 });
