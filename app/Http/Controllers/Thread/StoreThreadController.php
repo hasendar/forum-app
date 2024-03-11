@@ -12,7 +12,7 @@ class StoreThreadController extends Controller
     public function __invoke(StoreRequest $request)
     {
         $data = $request->validated();
-        $data = Thread::create($data);
+        Thread::create($data);
         
         return redirect()->route('forum');
     }

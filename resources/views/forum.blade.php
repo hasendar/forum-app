@@ -8,7 +8,7 @@
             <ul class="list-group list-group-flush">
                 @foreach ($threads as $thread)
                     <li class="list-group-item">
-                        <a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover">{{ $thread->title }}</a>
+                        <a href="{{ route('threads.show', $thread->id) }}" class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover">{{ $thread->title }}</a>
                     </li>
                 @endforeach
             </ul>
