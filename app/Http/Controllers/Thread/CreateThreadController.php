@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Thread;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 
-class CreateThreadController extends Controller
+class CreateThreadController extends BaseController
 {
     public function __invoke()
     {

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Thread;
 
-class ForumController extends Controller
+class ForumController extends BaseController
 {
     public function __invoke()
     {

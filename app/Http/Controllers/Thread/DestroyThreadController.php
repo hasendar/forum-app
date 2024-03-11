@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Thread;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Models\Thread;
 
-class DestroyThreadController extends Controller
+class DestroyThreadController extends BaseController
 {
     public function __invoke(Thread $thread)
     {
