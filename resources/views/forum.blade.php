@@ -2,8 +2,8 @@
 
 @section('content')
     <h1>Forum page</h1>
-    <a class="btn btn-primary" href="{{ route('threads.create') }}" role="button">Create Thread</a>
     <div class="container">
+        <a class="btn btn-primary" href="{{ route('threads.create') }}" role="button">Create Thread</a>
         <div class="card border-dark mt-3" style="width: 20rem;">
             <ul class="list-group list-group-flush">
                 @foreach ($threads as $thread)

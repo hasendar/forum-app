@@ -24,4 +24,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Thread'], function() {
     Route::get('/forum/create-thread', CreateThreadController::class)->name('threads.create');
     Route::post('/forum', StoreThreadController::class)->name('threads.store');
     Route::get('/forum/{thread}', ShowThreadController::class)->name('threads.show');
+    Route::get('/forum/{thread}/edit', EditThreadController::class)->name('threads.edit');
+    Route::patch('/forum/{thread}', UpdateThreadController::class)->name('threads.update');
 });
