@@ -9,6 +9,6 @@ class CreateThreadController extends Controller
 {
     public function __invoke()
     {
-        return view('thread.create');
+        return view('threads.create');
     }
 }

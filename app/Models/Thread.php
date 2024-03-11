@@ -12,4 +12,5 @@ class Thread extends Model
     use SoftDeletes;
 
     protected $table = 'threads';
+    protected $guarded = false;
 }

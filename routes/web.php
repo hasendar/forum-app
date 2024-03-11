@@ -21,5 +21,6 @@ Route::get('/forum', ForumController::class)->name('forum');
 Route::get('/about', AboutController::class)->name('about');
 
 Route::group(['namespace' => 'App\Http\Controllers\Thread'], function() {
-    Route::get('/forum/create-thread', CreateThreadController::class)->name('thread.create');
+    Route::get('/forum/create-thread', CreateThreadController::class)->name('threads.create');
+    Route::post('/forum', StoreThreadController::class)->name('threads.store');
 });

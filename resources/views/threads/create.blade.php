@@ -3,7 +3,7 @@
 @section('content')
     <h1>Create thread page</h1>
     <div class="container">
-        <form action="#" method="post" id="create-thread" style="width: 20rem;">
+        <form action="{{ route('threads.store') }}" method="post" id="create-thread" style="width: 20rem;">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Thread title</label>
