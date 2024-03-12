@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->text('content');
+            $table->unsignedInteger('likes');
             $table->timestamps();
             $table->softDeletes();
+
+            $table->unsignedInteger('thread_id');
         });
     }
 

@@ -12,4 +12,9 @@ class Post extends Model
     use SoftDeletes;
 
     protected $table = 'posts';
+
+    public function thread()
+    {
+        return $this->belongsTo(Thread::class);
+    }
 }

@@ -13,4 +13,9 @@ class Thread extends Model
 
     protected $table = 'threads';
     protected $guarded = false;
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
