@@ -11,8 +11,11 @@
             <button type="submit" class="btn btn-danger mb-3">Delete</button>
             <div class="card" style="width:20rem">
                 <div class="card-body">
-                    <h5>{{ $thread->title }}</h5>
-                    <p>{{ $thread->content }}</p>
+                    <h5>#{{ $thread->id }} {{ $thread->title }}</h5>
+                    <p>{{ $thread->content }}</p>  
+                </div>
+                <div class="card-footer">
+                    Created {{ $thread->created_at }}
                 </div>
             </div>
         </div>

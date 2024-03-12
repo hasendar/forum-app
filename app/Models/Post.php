@@ -12,6 +12,7 @@ class Post extends Model
     use SoftDeletes;
 
     protected $table = 'posts';
+    protected $guarded = false;
 
     public function thread()
     {

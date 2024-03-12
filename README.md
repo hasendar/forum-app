@@ -4,3 +4,7 @@
 - route:cache
 - make:factory ThreadFactory -m
 - migrate --seed
+- git checkout main
+- git pull origin main
+- git merge develop
+- git push origin main
