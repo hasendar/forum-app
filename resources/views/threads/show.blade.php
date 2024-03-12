@@ -12,12 +12,32 @@
             <div class="card" style="width:20rem">
                 <div class="card-body">
                     <h5>#{{ $thread->id }} {{ $thread->title }}</h5>
-                    <p>{{ $thread->content }}</p>  
+                    <p>{{ $thread->content }}</p>
                 </div>
                 <div class="card-footer">
                     Created {{ $thread->created_at }}
                 </div>
             </div>
+            @foreach ($posts as $post)
+                @if ($post->thread_id === $thread->id)
+                    <div class="card" style="width:20rem">
+                        <div class="card-body">
+                            <h5>#{{ $post->id }}</h5>
+                            <p>{{ $post->content }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-9">Created {{ $post->created_at }}</div>
+                                <div class="col">
+                                    <div class="badge text-bg-primary text-wrap">
+                                        {{ $post->likes }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
         </div>
     </form>
 @endsection
