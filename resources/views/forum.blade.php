@@ -13,5 +13,6 @@
                 @endforeach
             </ul>
         </div>
+        {{ $threads->links() }}
     </div>
 @endsection

@@ -9,7 +9,7 @@ class ForumController extends BaseController
 {
     public function __invoke()
     {
-        $threads = Thread::all();
+        $threads = Thread::paginate(5);
 
         return view('forum', compact('threads'));
     }

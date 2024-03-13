@@ -8,3 +8,4 @@
 - git pull origin main
 - git merge develop
 - git push origin main
+- vendor:publish --tag=laravel-pagination
