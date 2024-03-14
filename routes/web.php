@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\Thread\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,10 @@ Route::group(['namespace' => 'App\Http\Controllers\Thread'], function() {
     Route::get('/forum/{thread}/edit', EditThreadController::class)->name('threads.edit');
     Route::patch('/forum/{thread}', UpdateThreadController::class)->name('threads.update');
     Route::delete('/forum/{thread}', DestroyThreadController::class)->name('threads.destroy');
+});
+
+Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin'], function() {
+    Route::group(['namespace' => 'Thread'], function() {
+        Route::get('/thread', MainController::class)->name('admin.thread.main');
+    });
 });
