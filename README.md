@@ -9,3 +9,5 @@
 - git merge develop
 - git push origin main
 - vendor:publish --tag=laravel-pagination
+- composer require laravel/ui
+- ui:auth
